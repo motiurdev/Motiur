@@ -484,7 +484,11 @@ export default function App() {
           </div>
           
           <div className="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
-            <p>© 2026 Government Titumir College. All Rights Reserved.</p>
+            <div className="flex flex-col md:flex-row items-center md:space-x-4">
+              <p>© 2026 Government Titumir College. All Rights Reserved.</p>
+              <span className="hidden md:inline">|</span>
+              <p>Developed by <span className="text-college-gold font-bold">Misu</span></p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-white">Privacy Policy</a>
               <a href="#" className="hover:text-white">Terms of Service</a>
