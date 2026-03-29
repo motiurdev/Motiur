@@ -42,6 +42,14 @@ const notices = [
   { date: '15 Mar 2026', title: 'Registration for Extra-Curricular Activities' },
 ];
 
+const galleryImages = [
+  { url: 'https://titumircollege.gov.bd/wp-content/uploads/2024/10/vice-pr-825x510.jpg', span: 'col-span-2 row-span-2', alt: 'Main Campus Building' },
+  { url: 'https://titumircollege.gov.bd/wp-content/uploads/2024/10/Vice-m-825x510.jpg', span: 'col-span-1 row-span-1', alt: 'Student Activity' },
+  { url: 'https://titumircollege.gov.bd/wp-content/uploads/2024/09/Principal-new.jpg', span: 'col-span-1 row-span-1', alt: 'College Library' },
+  { url: 'https://titumircollege.gov.bd/wp-content/uploads/2023/08/IMG-20230509-WA0007-825x510.jpg', span: 'col-span-1 row-span-1', alt: 'Sports Event' },
+  { url: 'https://titumircollege.gov.bd/wp-content/uploads/2024/10/Eid-e-miladunnobi-825x510.jpg', span: 'col-span-1 row-span-1', alt: 'Classroom' },
+];
+
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -60,7 +68,7 @@ export default function App() {
       <div className="bg-college-blue text-white py-2 px-4 text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <span className="flex items-center"><Phone className="w-3 h-3 mr-1" /> +880 2-9882261</span>
+            <span className="flex items-center"><Phone className="w-3 h-3 mr-1" /> +8802222299490</span>
             <span className="flex items-center"><Mail className="w-3 h-3 mr-1" /> info@titumircollege.gov.bd</span>
           </div>
           <div className="flex items-center space-x-4">
@@ -130,7 +138,7 @@ export default function App() {
         <section id="home" className="relative h-[600px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://picsum.photos/seed/college-campus/1920/1080" 
+              src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweprVvNXwQYslXRQqh3yyrmeZqL97g5CFWYGpejMXv2K5vBffQneQ4DAviUUXNmVm_OXGn3Fsdez2bjgNi6zIDEEt9duLtzOcy3e6A9KPUEmEuLxgkSbvQrysImkFpjUoaWlHFG4bQ=s680-w680-h510-rw" 
               alt="Titumir College Campus" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -209,13 +217,13 @@ export default function App() {
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-college-gold/10 rounded-full -z-10"></div>
                 <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
                   <img 
-                    src="https://picsum.photos/seed/principal/200/200" 
+                    src="https://titumircollege.gov.bd/wp-content/uploads/2025/03/P-01-444x510.jpg" 
                     alt="Principal" 
                     className="w-32 h-32 rounded-xl object-cover shadow-lg"
                     referrerPolicy="no-referrer"
                   />
                   <div>
-                    <h3 className="text-2xl font-bold text-college-blue mb-1">Prof. Dr. [Name]</h3>
+                    <h3 className="text-2xl font-bold text-college-blue mb-1">Prof. Dr. Sadruddin Ahmad</h3>
                     <p className="text-college-gold font-medium mb-4">Principal, Govt. Titumir College</p>
                     <p className="text-gray-600 italic text-sm leading-relaxed">
                       "Our goal is to nurture the next generation of leaders who will contribute to the progress of our nation. We strive for academic excellence while maintaining a vibrant campus life."
@@ -330,17 +338,11 @@ export default function App() {
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { seed: 'campus-1', span: 'col-span-2 row-span-2' },
-                { seed: 'campus-2', span: 'col-span-1 row-span-1' },
-                { seed: 'campus-3', span: 'col-span-1 row-span-1' },
-                { seed: 'campus-4', span: 'col-span-1 row-span-1' },
-                { seed: 'campus-5', span: 'col-span-1 row-span-1' },
-              ].map((img, i) => (
+              {galleryImages.map((img, i) => (
                 <div key={i} className={`${img.span} overflow-hidden rounded-xl group relative`}>
                   <img 
-                    src={`https://picsum.photos/seed/${img.seed}/800/600`} 
-                    alt="Campus Activity" 
+                    src={img.url} 
+                    alt={img.alt} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
@@ -411,11 +413,11 @@ export default function App() {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-gray-500 uppercase">Full Name</label>
-                      <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-college-blue focus:ring-1 focus:ring-college-blue outline-none transition-all" placeholder="John Doe" />
+                      <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-college-blue focus:ring-1 focus:ring-college-blue outline-none transition-all" placeholder="Misu" />
                     </div>
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-gray-500 uppercase">Email Address</label>
-                      <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-college-blue focus:ring-1 focus:ring-college-blue outline-none transition-all" placeholder="john@example.com" />
+                      <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-college-blue focus:ring-1 focus:ring-college-blue outline-none transition-all" placeholder="titumircollegemail@gmail.com" />
                     </div>
                   </div>
                   <div className="space-y-1">
